@@ -6,8 +6,8 @@
   "scripts": {
     "test": "npm test"
   },
-  "dependencies":{
-    "selenium-webdriver": "2.88.0"
+  "devDependencies":{
+    "selenium-webdriver": "^2.88.0"
   },
   "repository": {
     "type": "git",
