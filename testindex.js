@@ -1,11 +1,12 @@
-var webdriver = require('selenium-webdriver');
-var assert = require('assert');
+var webdriver = require('selenium-webdriver'),
+    By = webdriver.By,
+    until = webdriver.until;
 
-var capabilities = {
-    'browserName': 'chrome'
-}
+var driver = new webdriver.Builder()
+    .forBrowser('chrome')
+    .build();
 
-var driver = new webdriver.Builder().usingServer('http://localhost:4444/wd/hub').withCapabilities(capabilities).build();
+
 
 driver.get('http://b3decbba.ngrok.io');
 
