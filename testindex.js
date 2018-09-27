@@ -1,10 +1,19 @@
-var webdriver = require('selenium-webdriver'),
-    By = webdriver.By,
-    until = webdriver.until;
+var webdriver = require('selenium-webdriver');
+var assert = require('assert');
 
-var driver = new webdriver.Builder()
-    .forBrowser('chrome')
-    .build();
+
+By = webdriver.By, until = webdriver.until;
+
+
+var capabilities = {
+ 'browserName' : 'chrome'
+}
+
+var child;
+
+//Initialize Driver
+var driver = new webdriver.Builder().usingServer('http://localhost:4444/wd/hub').withCapabilities(capabilities).build();
+
 
 
 
